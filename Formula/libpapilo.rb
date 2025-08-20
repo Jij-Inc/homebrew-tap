@@ -6,6 +6,9 @@ class Libpapilo < Formula
   sha256 "604d6666a9adb5f405d9cf24b2623c2bdcd9bc261274539835e72008450687db"
   license "LGPL-3.0"
 
+  depends_on "boost"
+  depends_on "pkg-config"
+
   def install
     include.install "include/libpapilo.h"
     lib.install Dir["lib/*"]
