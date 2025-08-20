@@ -1,9 +1,9 @@
 class Libpapilo < Formula
   desc "PaPILO as a Presolve-Only Shared Library with C API"
   homepage "https://github.com/Jij-Inc/libpapilo"
-  url "https://github.com/Jij-Inc/libpapilo/releases/download/v2.4.3-jij.1/libpapilo-2.4.3-jij.1-Darwin-libpapilo.tar.gz"
-  version "2.4.3-jij.1"
-  sha256 "68aad83e0f22b446c98a39362a3253e8fe48206a350bbe0e259a95239a07e2f0"
+  url "https://github.com/Jij-Inc/libpapilo/releases/download/v2.4.3-jij.3/libpapilo-2.4.3-jij.3-Darwin-libpapilo.tar.gz"
+  version "2.4.3-jij.3"
+  sha256 "604d6666a9adb5f405d9cf24b2623c2bdcd9bc261274539835e72008450687db"
   license "LGPL-3.0"
 
   def install
@@ -16,7 +16,8 @@ class Libpapilo < Formula
       #include "libpapilo.h"
       int main() { return 0; }
     EOS
-    system ENV.cc, "test.c", "-L#{lib}", "-lpapilo", "-o", "test"
+    flags = shell_output("pkg-config --cflags --libs libpapilo").strip.split
+    system ENV.cc, "test.c", *flags, "-o", "test"
     system "./test"
   end
 end
