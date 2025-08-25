@@ -1,9 +1,9 @@
 class Libpapilo < Formula
   desc "PaPILO as a Presolve-Only Shared Library with C API"
   homepage "https://github.com/Jij-Inc/libpapilo"
-  url "https://github.com/Jij-Inc/libpapilo/releases/download/v2.4.3-jij.3/libpapilo-2.4.3-jij.3-Darwin-libpapilo.tar.gz"
-  version "2.4.3-jij.3"
-  sha256 "604d6666a9adb5f405d9cf24b2623c2bdcd9bc261274539835e72008450687db"
+  url "https://github.com/Jij-Inc/libpapilo/releases/download/v2.4.3-jij.5/libpapilo-2.4.3-jij.5-Darwin-libpapilo.tar.gz"
+  version "2.4.3-jij.5"
+  sha256 "d30da0eeb784b3b30a291d2c5d74969526c2629255034c21188ef3257b035397"
   license "LGPL-3.0"
 
   depends_on "boost"
