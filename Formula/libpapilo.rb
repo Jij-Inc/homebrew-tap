@@ -24,4 +24,10 @@ class Libpapilo < Formula
     system ENV.cc, "test.c", *flags, "-o", "test"
     system "./test"
   end
+
+  livecheck do
+    url :stable
+    strategy :github_latest
+    regex(/^v?(\d+\.\d+\.\d+-jij\.\d+)$/i)
+  end
 end
