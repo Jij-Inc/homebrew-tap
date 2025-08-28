@@ -6,6 +6,12 @@ class Libpapilo < Formula
   sha256 "7ca1cba37bed7e9107361f2df32145080b03d26acb07a994f7619f37b0f1f17f"
   license "LGPL-3.0"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+    regex(/^v?(\d+\.\d+\.\d+-jij\.\d+)$/i)
+  end
+
   depends_on "boost"
   depends_on "pkg-config"
   depends_on "tbb"

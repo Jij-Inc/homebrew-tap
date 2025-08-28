@@ -1,0 +1,21 @@
+name: Auto bump
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  bump:
+    runs-on: macos-latest
+    steps:
+      - name: Bump formula via livecheck
+        uses: dawidd6/action-homebrew-bump-formula@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tap: Jij-Inc/homebrew-tap
+          formula: libpapilo
+          no_fork: true
+          livecheck: true
