@@ -7,8 +7,8 @@ class Libpapilo < Formula
   license "LGPL-3.0"
 
   depends_on "boost"
-  depends_on "tbb"
   depends_on "pkg-config"
+  depends_on "tbb"
 
   def install
     include.install "include/libpapilo.h"
