@@ -4,7 +4,7 @@ class Libpapilo < Formula
   url "https://github.com/Jij-Inc/libpapilo/releases/download/v3.0.0-jij.1/libpapilo-3.0.0-jij.1-Darwin-libpapilo.tar.gz"
   version "3.0.0-jij.1"
   sha256 "83f14d1c2871b0194747d948ef8977d2d2bad599b413e536bf7fecf7baf718f7"
-  license "LGPL-3.0"
+  license "Apache-2.0"
 
   livecheck do
     url :stable
